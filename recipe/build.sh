@@ -16,10 +16,10 @@ sed -i.bak 's/-static //g' makefile.gf
 # the makefiles are only makefile _templates_, but basically functional;
 # to avoid use of perl for mkmf, just execute the template and then
 # do the installation step manually
-make FC="$FC $FFLAGS" LINKER=$FC LDFLAGS="$LDFLAGS" install -f makefile.gf
+make FC="$FC $FFLAGS -std=legacy" LINKER=$FC LDFLAGS="$LDFLAGS" install -f makefile.gf
 cp ./x13as_ascii $PREFIX/bin
 
 cd ../html
 sed -i.bak 's/-static //g' makefile.gf
-make FC="$FC $FFLAGS" LINKER=$FC LDFLAGS="$LDFLAGS" install -f makefile.gf
+make FC="$FC $FFLAGS -std=legacy" LINKER=$FC LDFLAGS="$LDFLAGS" install -f makefile.gf
 cp ./x13as_html $PREFIX/bin
