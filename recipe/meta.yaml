@@ -21,7 +21,7 @@ source:
       - patches/0002-avoid-installion-in-Makefile.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
